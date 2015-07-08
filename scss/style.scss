@@ -1,0 +1,312 @@
+body, html{
+	padding: 0;
+	margin: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+body{
+
+	margin: 0;
+	padding: 0;
+	font-family: helvetica;
+	line-height: 1.3em;
+	position: relative;
+}
+
+header{
+	// display: flex;
+	// align-items: center;
+	background-color: black;
+	color: white;
+	height:60px;
+	z-index: 2;
+}
+
+img{
+	width: 100%;
+}
+
+figure{
+	position: absolute;
+	opacity: 0;
+	transition: 2s;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+
+}
+
+
+// Navigation styles
+
+nav{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	z-index: 3;
+	button{
+		z-index: 4;
+		height: 40px;
+  		width: 47px;
+  		font-size: 16px;
+		background-color: darken(darkgrey, 20%);
+		color: white;
+		outline: none;
+		border: 1px solid darken(darkgrey, 20%);
+		border-radius: 10px;
+		display: none;
+		&:hover{
+			background-color: darken(darkgrey, 30%);
+			border-color: darken(darkgrey, 30%);
+		}
+	}
+}
+
+	div#links{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		ul{
+			margin-left: 40%;
+			width: 100%;
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100%;
+			li{
+				width: 200px;
+				height: 100%;
+				a{
+					min-width: 100%;
+					text-decoration: none;
+					padding: 25px 20px;
+
+					font-family: helvetica;
+					font-size: 18px;
+					color: white;
+					min-height: 100%;
+
+					&:hover{
+						background-color: white;
+						color: black;
+					}
+
+				}
+			}
+		}
+	}
+
+#logo{
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+div#showLinks{
+	background-color: hsla(0,0%,0%,1);
+	min-height: 100%;
+	min-width: 100%;
+	position: relative;
+	transition: all 500ms ease;
+	z-index: 1;
+	ul{
+		position: absolute;
+		left: 0;
+		transition: all 500ms ease-in-out;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+  		text-align: center;
+  		background-color: hsl(0, 0%, 0%);
+		li:first-child{
+			margin-top: 0;
+		}
+	}
+}
+div#showLinks li{ 
+	list-style: none;
+	text-align: center;
+	padding: 10px 40px;
+	margin: 5px 0;
+	&:hover{
+		background-color: hsla(0,0%,10%,1);
+	}
+	a{
+		color: white;
+		text-decoration: none;
+		font-size: 16px;
+	}
+}
+
+.showLinks{
+	top: 0;
+	transition: all 500ms ease;
+}
+
+.hideLinks{
+	top: -500px;
+}
+
+div#container{
+	min-width: 100%;
+	min-height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+
+
+// Slideshow styles
+
+
+.slideshow{
+	position: relative;
+	display: block;
+	overflow: hidden;
+	z-index: 0;
+}
+
+figure.show{
+	opacity: 1;
+	position: static;
+	transition:2s;
+}
+
+.next, .prev{
+	position: absolute;
+	top: calc(50% - 25px);
+	z-index: 1;
+	font-size: 2em;
+	background-color: darken(darkgrey, 40%);
+	border: 1px solid arken(darkgrey, 45%);
+	color: darken(white, 20%);
+	width: 75px;
+	height: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	opacity: .9;
+	&:hover{
+		background-color: darken(darkgrey, 50%);
+		border: 1px solid arken(darkgrey, 55%);	
+		opacity: 1;
+		cursor: pointer;
+	}
+}
+
+.next{
+	right: 0;
+}
+.prev{
+	left: 0;
+}
+
+
+
+
+
+
+// Overlay styles
+
+
+div.hide{
+	visibility: hidden;
+}
+div#overlay{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	min-height: 100vh;
+	text-align: center;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, .85);
+	//padding-top: 10%;
+	padding-bottom: 0;
+	& div{
+		width: 75%;
+		margin: 125px auto;
+		background-color: #fff;
+		border: 1px solid black;
+		padding: 5%;
+		text-align: center;
+	}
+}
+
+
+
+button{
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	padding: 5px 15px;
+	border-radius: 5px;
+	background-color: darkgreen;
+	outline: none;
+	border: 1px solid darken(darkgreen, 5%);
+	color: lightgray;
+	&:hover{
+		background-color: darken(darkgreen, 10%);	
+	}
+	&:last-child{
+		position: static;
+		background-color: maroon;
+		border: 1px solid darkred;
+		margin-top: 25px;
+		&:hover{
+			background-color: darken(maroon, 10%);	
+		}
+	}
+	&:first-child{
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+	header{
+		padding: 10px 30px 30px;
+	}
+	#logo h1{
+		display: none;
+	}
+	#logo button {
+		display: block;
+	}
+	div#links ul#ulLinks{
+		display: none;
+	}
+
+}
+
+@media screen and (min-width: 600px) {
+	// #showLinks{
+	// 	display: none;
+	// }
+}
+

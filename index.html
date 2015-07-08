@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div id="logo">
+				<h1>LOGO</h1>
+				<button id="menuButton"><i class="icon-align-justify"></i></button>				
+			</div>
+
+			<div id="links">
+				<ul id="ulLinks" class="showLinks">
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div id="showLinks" class="hideLinks">
+		<ul>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+	<div id="container">
+		
+		<div class="slideshow">
+			<figure class='show'>
+				<img src="img/avengers.jpg" height="400" width="1200">
+			</figure>
+			<figure>
+				<img src="img/xmen.jpg" height="400" width="1200">
+			</figure>		
+			<figure>
+				<img src="img/marvel.jpg" height="400" width="1200">
+			</figure>
+
+			<span class="prev">&#8668;</span>
+			<span class="next">&#8669;</span>
+
+		</div>
+
+	</div>
+
+
+<button id="openModal">Open</button>
+
+	<div id="overlay" class="hide">
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+			<button id="closeModal">Close</button>
+
+		</div>
+	</div>
+
+
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
